@@ -6,20 +6,17 @@ import { motion } from 'framer-motion';
 const Background = () => {
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none select-none transition-colors duration-500">
-      {/* 🔹 Animated Dark Gradient */}
+      {/* 🔹 Theme-Aware Animated Background */}
+      <div className="absolute inset-0 z-[-3] bg-bg-primary" />
       <motion.div
-        className="absolute inset-0 opacity-40 dark:opacity-70"
+        className="absolute inset-0 z-[-2] bg-slate-200 dark:bg-black"
         animate={{
-          backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+          opacity: [0, 0.4, 0],
         }}
         transition={{
-          duration: 30,
-          ease: "linear",
+          duration: 15,
+          ease: "easeInOut",
           repeat: Infinity,
-        }}
-        style={{
-          backgroundImage: "linear-gradient(-45deg, #111827, #000000, #081014, #111827)",
-          backgroundSize: "400% 400%",
         }}
       />
       {/* 🔹 Light Trails (SVG) */}

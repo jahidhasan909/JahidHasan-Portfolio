@@ -20,7 +20,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Jahid Hasan | Portfolio",
-  description: "Futuristic Web Developer Portfolio built with Next.js, GSAP, and Framer Motion.",
+  description: "...",
 };
 
 export default function RootLayout({ children }) {

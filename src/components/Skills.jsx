@@ -13,12 +13,12 @@ const SkillCard = ({ title, items, delay }) => (
     whileHover={{ scale: 1.05 }}
     className="glass-card p-10 rounded-[2.5rem] transition-all duration-500 glow-blue-hover"
   >
-    <h3 className="text-2xl font-bold text-white mb-6">{title}</h3>
+    <h3 className="text-2xl font-bold text-text-primary mb-6">{title}</h3>
 
     <div className="space-y-4">
       {items.map((skill, i) => (
         <div key={i}>
-          <div className="flex justify-between text-sm text-white">
+          <div className="flex justify-between text-sm text-text-primary">
             <span>{skill.name}</span>
             <span>{skill.level}</span>
           </div>
@@ -50,7 +50,7 @@ const Skills = () => {
       >
         <div className="flex flex-col items-center mb-20">
           <p className="text-accent-blue text-xs font-bold uppercase tracking-[0.3em] mb-4">Mastery</p>
-          <h2 className="text-4xl md:text-5xl font-display font-black text-white text-center">
+          <h2 className="text-4xl md:text-5xl font-display font-black text-text-primary text-center">
             Skills
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />

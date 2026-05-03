@@ -6,6 +6,7 @@ import React from "react";
 import { Send, Sparkles, Code2, Rocket } from 'lucide-react';
 import { useState, useEffect } from "react";
 
+
 const GithubIcon = ({ size = 20 }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size}>
     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
@@ -49,7 +50,7 @@ const StatCard = ({ Icon: IconComponent, title, value, delay, className }) => (
     </div>
     <div>
       <p className="text-[10px] text-text-secondary uppercase tracking-widest leading-none mb-1">{title}</p>
-      <p className="text-lg font-bold text-white leading-none">{value}</p>
+      <p className="text-lg font-bold text-text-primary leading-none">{value}</p>
     </div>
   </motion.div>
 );
@@ -94,7 +95,7 @@ const Hero = () => {
 
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 px-6 lg:px-12 overflow-hidden">
+    <section id="home" className="relative  container mx-auto   min-h-screen flex items-center pt-20 px-6 lg:px-12 overflow-hidden">
       {/* Removed Background Glow Spots */}
 
       {/* 🔹 Left: Vertical Socials */}
@@ -102,7 +103,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-30"
+        className="absolute hidden  lg:flex left-6 lg:left-12 top-1/2 -translate-y-1/2  flex-col gap-6 z-30 overflow-x-hidden "
       >
         <SocialIcon Icon={LinkedinIcon} href="#" label="LinkedIn" />
         <SocialIcon Icon={GithubIcon} href="#" label="GitHub" />
@@ -110,72 +111,121 @@ const Hero = () => {
         <div className="w-[1px] h-24 bg-gradient-to-b from-accent-blue to-transparent self-center mt-2 opacity-50" />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_auto_1fr] gap-12 items-center relative z-10">
-        {/* 🔹 Left Spacer for socials on large screens */}
-        <div className="hidden lg:block w-16" />
+      <div className="container mx-auto w-full grid lg:grid-cols-2 gap-10 items-center relative z-10 lg:px-38">
+
 
         {/* 🔹 Center: Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-center lg:text-left z-10 flex flex-col items-center lg:items-start gap-8"
-        >
-          <div className="space-y-4">
-            <motion.p
-              variants={itemVariants}
-              className="text-xl md:text-2xl  font-medium"
-            >
-              Hey, I'm
-            </motion.p>
-            <motion.h1
-              variants={itemVariants}
-              className="text-6xl md:text-8xl font-display font-black leading-tight text-white"
-            >
-              Jahid <span className="">Hasan</span>
-            </motion.h1>
-
-
-            I am a{" "}
-            <span className="relative inline-block">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={roles[roleIndex]}
-                  initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-                  transition={{ duration: 0.4 }}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-purple"
-                >
-                  {roles[roleIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
-
-
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-text-secondary max-w-xl leading-relaxed pt-4"
-            >
-              Crafting immersive digital experiences with modern tech.
-              Specialized in high-performance web applications and creative UI design.
-            </motion.p>
-          </div>
-
+        <div className="">
           <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-center lg:text-left z-10 flex flex-col items-center lg:items-start gap-8"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 glass-card text-white font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]"
+            <div className="space-y-4">
+              <motion.p
+                variants={itemVariants}
+                className="text-xl md:text-2xl  font-medium"
+              >
+                Hey, I'm
+              </motion.p>
+              <motion.h1
+                variants={itemVariants}
+                className="text-4xl md:text-5xl font-display font-black leading-tight text-text-primary flex items-center gap-2"
+              >
+                Jahid Hasan
+
+                <motion.span
+                  animate={{ rotate: [0, 20, -10, 20, 0] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                    ease: "easeInOut",
+                  }}
+                  className="inline-block origin-bottom-right"
+                >
+                  👋
+                </motion.span>
+              </motion.h1>
+
+
+              I am a{" "}
+              <span className="relative inline-block">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={roles[roleIndex]}
+                    initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
+                    transition={{ duration: 0.4 }}
+                    className=" lg:text-2xl"
+                  >
+                    {roles[roleIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+
+
+              <motion.p
+                variants={itemVariants}
+                className="text-lg text-text-secondary max-w-xl leading-relaxed pt-4"
+              >
+                💻 Turning ideas into Stunning Websites <br />
+                Available for projects and collaborations .
+              </motion.p>
+            </div>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col items-center lg:items-start gap-6"
             >
-              Say Hello
-              <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue" />
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]"
+              >
+                Say Hello
+                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue" />
+              </motion.button>
+
+
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="mt-10 flex flex-col items-center lg:items-start gap-3"
+              >
+                {/* Mouse + scroll animation */}
+                <div className="flex flex-row items-center gap-3">
+                  {/* Mouse Icon */}
+                  <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center p-1">
+                    <motion.div
+                      animate={{ y: [0, 10, 0] }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="w-1.5 h-1.5 bg-accent-blue rounded-full"
+                    />
+                  </div>
+
+                  {/* Scroll text */}
+                  <motion.span
+                    animate={{ opacity: [0.4, 1, 0.4] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="text-xs text-text-secondary tracking-widest"
+                  >
+                    SCROLL DOWN
+                  </motion.span>
+                </div>
+              </motion.div>
+
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* 🔹 Right: Profile Image */}
         <div className="relative flex justify-center lg:justify-end py-12">
@@ -221,20 +271,21 @@ const Hero = () => {
             <StatCard
               Icon={Code2}
               title="Experience"
-              value="5+ Years"
+              value="6+ Months"
               delay={1.2}
               className="-top-8 -right-4 md:-right-12 backdrop-blur-2xl"
             />
             <StatCard
               Icon={Rocket}
               title="Projects"
-              value="120+ Done"
+              value="25+ Done"
               delay={1.4}
               className="-bottom-8 -left-4 md:-left-12 backdrop-blur-2xl"
             />
           </motion.div>
         </div>
       </div>
+
     </section>
   );
 };

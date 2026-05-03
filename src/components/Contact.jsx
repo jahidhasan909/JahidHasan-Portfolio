@@ -16,8 +16,8 @@ const Contact = () => {
       >
         {/* LEFT */}
         <div>
-          <h2 className="text-2xl text-white mb-6">Contact</h2>
-          <p className="text-white/60">nur.adnan@example.com</p>
+          <h2 className="text-2xl text-text-primary mb-6">Contact</h2>
+          <p className="text-text-secondary">nur.adnan@example.com</p>
         </div>
 
         {/* RIGHT */}
@@ -28,9 +28,9 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <form className="space-y-4">
-            <input className="w-full p-3 bg-black/20 text-white" placeholder="Name" />
-            <input className="w-full p-3 bg-black/20 text-white" placeholder="Email" />
-            <textarea className="w-full p-3 bg-black/20 text-white" placeholder="Message" />
+            <input className="w-full p-3 bg-black/20 text-text-primary" placeholder="Name" />
+            <input className="w-full p-3 bg-black/20 text-text-primary" placeholder="Email" />
+            <textarea className="w-full p-3 bg-black/20 text-text-primary" placeholder="Message" />
 
             <motion.button 
               whileHover={{ scale: 1.05 }}

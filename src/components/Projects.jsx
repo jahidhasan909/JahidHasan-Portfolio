@@ -57,7 +57,7 @@ const ProjectCard = ({ title, type, description, image, tags, delay }) => (
 
       {/* Content */}
       <div className="p-8 flex flex-col flex-grow">
-        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">
+        <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-accent-blue transition-colors">
           {title}
         </h3>
         <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-grow">
@@ -71,7 +71,7 @@ const ProjectCard = ({ title, type, description, image, tags, delay }) => (
           ))}
         </div>
         <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
-          <button className="flex items-center gap-2 text-white font-bold text-sm hover:text-accent-blue transition-colors group/btn">
+          <button className="flex items-center gap-2 text-text-primary font-bold text-sm hover:text-accent-blue transition-colors group/btn">
             View Project
             <ExternalLink size={16} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
           </button>
@@ -121,7 +121,7 @@ const Projects = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-display font-bold text-white text-center"
+            className="text-4xl md:text-5xl font-display font-bold text-text-primary text-center"
           >
             Featured <span className="text-glow-blue text-accent-blue">Projects</span>
           </motion.h2>

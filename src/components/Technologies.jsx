@@ -53,7 +53,7 @@ const Technologies = ({ techs = [] }) => {
           <p className="text-accent-blue text-xs font-bold uppercase tracking-[0.3em] mb-4">
             Stack
           </p>
-          <h2 className="text-4xl md:text-5xl font-display font-black text-white text-center">
+          <h2 className="text-4xl md:text-5xl font-display font-black text-text-primary text-center">
            Technologies
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />

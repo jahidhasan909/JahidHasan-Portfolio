@@ -7,6 +7,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { ToastContainer } from 'react-toastify';
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Qualification />
       <Projects />
       <Contact />
+      <ToastContainer position='top-center' />
       <Footer />
     </main>
   );

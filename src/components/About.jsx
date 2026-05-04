@@ -41,7 +41,7 @@ const About = () => {
             className="text-center text-xs font-bold tracking-[0.3em] mb-4"
           >
             <h1 className='text-4xl font-bold font-display mb-2'>About</h1>
-            <p className='text-[10px] tracking-wider uppercase'>My Introduction</p>
+            <p className='text-[10px] text-text-secondary tracking-wider uppercase'>My Introduction</p>
             <div className="w-20 mx-auto h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
           </motion.div>
         </div>
@@ -189,7 +189,7 @@ const About = () => {
                 className="px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]"
               >
                 Download CV
-                <Download size={18} className="group-hover:translate-y-1 transition-transform" />
+                <Download size={18} className="group-hover:translate-y-1 transition-transform text-accent-blue" />
               </motion.button>
             </div>
 

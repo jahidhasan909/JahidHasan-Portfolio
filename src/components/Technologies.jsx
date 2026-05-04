@@ -114,7 +114,7 @@ const Technologies = () => {
           <h2 className="text-4xl md:text-4xl font-display font-black text-text-primary text-center">
            Technologies
           </h2>
-          <p className="text-[10px] font-bold uppercase tracking-wider mt-4">
+          <p className="text-[10px] text-text-secondary font-bold uppercase tracking-wider mt-4">
             My Tech Stack 
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />

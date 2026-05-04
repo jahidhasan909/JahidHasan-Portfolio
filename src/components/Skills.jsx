@@ -2,83 +2,111 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2 } from 'lucide-react';
+import { Monitor, Server, CheckCircle } from 'lucide-react';
 
-const SkillCard = ({ title, items, delay }) => (
+/* ── Skill Item with check icon ── */
+const SkillItem = ({ name, delay }) => (
   <motion.div
-    initial={{ opacity: 0, scale: 0.95 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.6, delay }}
-    whileHover={{ scale: 1.05 }}
-    className="glass-card p-10 rounded-[2.5rem] transition-all duration-500 glow-blue-hover"
+    initial={{ opacity: 0, x: -10 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay, duration: 0.4 }}
+    className="flex items-center gap-3 group"
   >
-    <h3 className="text-2xl font-bold text-text-primary mb-6">{title}</h3>
+    <CheckCircle size={16} className="text-accent-blue shrink-0 group-hover:scale-110 transition-transform" />
+    <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors duration-300">
+      {name}
+    </span>
+  </motion.div>
+);
 
-    <div className="space-y-4">
-      {items.map((skill, i) => (
-        <div key={i}>
-          <div className="flex justify-between text-sm text-text-primary">
-            <span>{skill.name}</span>
-            <span>{skill.level}</span>
-          </div>
+/* ── Glass Skill Card ── */
+const SkillCard = ({ title, Icon, skills, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-80px" }}
+    transition={{ duration: 0.6, delay }}
+    whileHover={{ y: -8, transition: { duration: 0.3 } }}
+    className="relative group"
+  >
+    {/* Subtle border glow on hover */}
+    <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-accent-blue/0 via-accent-blue/0 to-accent-purple/0 group-hover:from-accent-blue/30 group-hover:via-accent-blue/10 group-hover:to-accent-purple/30 transition-all duration-500 blur-[1px]" />
 
-          <div className="h-1 bg-white/10 rounded">
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: skill.level }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: i * 0.1 }}
-              className="h-full bg-blue-500"
-            />
-          </div>
+    <div className="relative glass-card rounded-3xl p-8 md:p-10 border border-white/10 group-hover:border-accent-blue/20 transition-all duration-500 h-full">
+      
+      {/* Icon + Title */}
+      <div className="flex items-center gap-4 mb-8">
+        <motion.div
+          whileHover={{ rotate: 8, scale: 1.1 }}
+          className="w-14 h-14 rounded-2xl bg-accent-blue/10 flex items-center justify-center text-accent-blue group-hover:bg-accent-blue/20 transition-colors duration-300"
+        >
+          <Icon size={26} />
+        </motion.div>
+        <div>
+          <h3 className="text-xl font-bold text-text-primary">{title}</h3>
+          <p className="text-[10px] uppercase tracking-widest text-text-secondary mt-1">
+            {skills.length} Technologies
+          </p>
         </div>
-      ))}
+      </div>
+
+      {/* Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-accent-blue/20 to-transparent mb-6" />
+
+      {/* Skills Grid */}
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        {skills.map((skill, i) => (
+          <SkillItem key={skill} name={skill} delay={delay + 0.1 + i * 0.08} />
+        ))}
+      </div>
     </div>
   </motion.div>
 );
 
+/* ── Main Skills Section ── */
 const Skills = () => {
+  const frontendSkills = ['HTML5', 'Tailwind CSS', 'JavaScript', 'React.js', 'Next.js'];
+  const backendSkills = ['Node.js', 'Express.js', 'MongoDB'];
+
   return (
-    <section id="skills" className="py-20 overflow-hidden relative">
-      <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="max-w-7xl mx-auto px-6 lg:px-12"
-      >
-        <div className="flex flex-col items-center mb-20">
-          <p className="text-accent-blue text-xs font-bold uppercase tracking-[0.3em] mb-4">Mastery</p>
-          <h2 className="text-4xl md:text-5xl font-display font-black text-text-primary text-center">
+    <section id="skills" className="py-32 px-6 lg:px-12 overflow-hidden relative">
+      <div className="max-w-5xl mx-auto">
+
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col items-center mb-20"
+        >
+          <h2 className="text-4xl font-display font-black text-text-primary text-center">
             Skills
           </h2>
+          <p className="text-[10px] font-bold uppercase tracking-wider mt-4">My Technical Skills</p>
           <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
           <SkillCard
-            title="Frontend"
-            delay={0.2}
-            items={[
-              { name: 'React', level: '90%' },
-              { name: 'Next.js', level: '85%' },
-            ]}
+            title="Frontend Developer"
+            Icon={Monitor}
+            skills={frontendSkills}
+            delay={0.1}
           />
-
           <SkillCard
-            title="Backend"
-            delay={0.4}
-            items={[
-              { name: 'Node.js', level: '80%' },
-              { name: 'MongoDB', level: '75%' },
-            ]}
+            title="Backend Developer"
+            Icon={Server}
+            skills={backendSkills}
+            delay={0.3}
           />
         </div>
-      </motion.div>
+
+      </div>
     </section>
   );
 };
-
 
 export default Skills;

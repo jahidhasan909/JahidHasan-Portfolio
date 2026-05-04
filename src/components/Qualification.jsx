@@ -2,127 +2,195 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import { GraduationCap, Calendar } from 'lucide-react';
 
-const TimelineItem = ({ Icon, title, subtitle, date, description, side, delay }) => {
-  const isLeft = side === 'left';
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className={`relative flex items-center justify-between mb-12 w-full ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
-    >
-      {/* Content Card */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.05 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="w-[45%] glass-card p-6 rounded-2xl border-white/5 hover:border-accent-blue/30 transition-all duration-500 glow-blue-hover group"
-      >
-        <div className="flex items-center gap-2 text-accent-blue text-xs font-bold uppercase tracking-widest mb-3">
-          <Calendar size={14} />
-          {date}
-        </div>
-        <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">{title}</h3>
-        <p className="text-sm text-text-secondary font-medium mb-3">{subtitle}</p>
-        {description && <p className="text-xs text-text-secondary/70 leading-relaxed">{description}</p>}
-      </motion.div>
+/* ── Education Data ── */
+const educationData = [
+  {
+    title: 'SSC',
+    institute: 'Ranigonj High School',
+    year: '2016 - 2021',
+  },
+  {
+    title: 'Diploma in Computer Science & Technology (CST)',
+    institute: 'Centre For Technology Transfer Polytechnic Institute',
+    year: '2022 - 2026',
+  },
+];
 
-      {/* Center Node */}
-      <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#020617] border-2 border-accent-blue z-10">
-        <div className="absolute inset-0 rounded-full bg-accent-blue animate-ping opacity-20" />
-      </div>
-
-      {/* Spacer for the other side */}
-      <div className="w-[45%] hidden md:block" />
-    </motion.div>
-  );
-};
-
+/* ── Qualification Section ── */
 const Qualification = () => {
   return (
-    <section id="qualification" className="py-32 px-6 lg:px-12 relative overflow-hidden bg-white/[0.01]">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
+    <section id="qualification" className="py-32 px-6 lg:px-12 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto">
+
+        {/* Header */}
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center mb-24"
+          className="flex flex-col items-center mb-20"
         >
-          <p className="text-accent-blue text-xs font-bold uppercase tracking-[0.3em] mb-4">Trajectory</p>
-          <h2 className="text-4xl md:text-5xl font-display font-black text-white text-center">
-            Career <span className="text-glow-blue text-accent-blue">Timeline</span>
+          <h2 className="text-4xl font-display font-black text-text-primary text-center">
+            Qualification
           </h2>
+          <p className="text-[10px] font-bold uppercase tracking-wider mt-4 text-text-secondary">My Personal Journey</p>
           <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
         </motion.div>
 
-        <div className="relative mt-20">
-          {/* 🔹 Central Timeline Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-blue via-accent-purple to-transparent opacity-20 hidden md:block" />
+        {/* Timeline Container */}
+        <div className="relative">
 
-          <div className="space-y-24 relative">
-            {/* Experience Section */}
-            <div>
-              <div className="flex justify-center mb-16">
-                <div className="px-6 py-2 glass-card rounded-full text-accent-blue text-xs font-bold uppercase tracking-widest border-accent-blue/30">
-                  Professional Experience
-                </div>
-              </div>
-              <div className="space-y-12">
-                <TimelineItem 
-                  Icon={Briefcase}
-                  title="Senior Full Stack Developer"
-                  subtitle="TechVisions Global"
-                  date="2021 - Present"
-                  description="Leading the development of scalable cloud-native applications using Next.js and Node.js. Optimized performance by 40%."
-                  side="left"
-                  delay={0.2}
-                />
-                <TimelineItem 
-                  Icon={Briefcase}
-                  title="Backend Engineer"
-                  subtitle="DataFlow Systems"
-                  date="2019 - 2021"
-                  description="Designed and implemented microservices architectures using Docker and PostgreSQL. Reduced latency by 25%."
-                  side="right"
-                  delay={0.4}
-                />
-              </div>
-            </div>
+          {/* ── Vertical Center Line (desktop) ── */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px origin-top bg-gradient-to-b from-accent-blue via-accent-blue/30 to-transparent"
+          />
 
-            {/* Education Section */}
-            <div className="pt-20">
-              <div className="flex justify-center mb-16">
-                <div className="px-6 py-2 glass-card rounded-full text-accent-purple text-xs font-bold uppercase tracking-widest border-accent-purple/30">
-                  Academic Foundation
+          {/* ── Vertical Left Line (mobile) ── */}
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="md:hidden absolute left-6 top-0 bottom-0 w-px origin-top bg-gradient-to-b from-accent-blue via-accent-blue/30 to-transparent"
+          />
+
+          {/* Timeline Items */}
+          <div className="space-y-16">
+            {educationData.map((item, index) => {
+              const isEven = index % 2 === 0;
+              const delay = 0.2 + index * 0.3;
+
+              return (
+                <div key={item.title} className="relative">
+
+                  {/* ── Desktop Layout ── */}
+                  <div className="hidden md:grid md:grid-cols-[1fr_80px_1fr] items-start">
+
+                    {/* Left Column */}
+                    <div className={isEven ? 'pr-8' : ''}>
+                      {isEven && (
+                        <motion.div
+                          initial={{ opacity: 0, x: -60 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay, duration: 0.7, ease: 'easeOut' }}
+                          whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                          className="group"
+                        >
+                          <div className="relative">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent-blue/0 to-accent-purple/0 group-hover:from-accent-blue/30 group-hover:to-accent-purple/30 transition-all duration-500 blur-sm" />
+                            <div className="relative glass-card rounded-2xl p-7 border border-white/10 group-hover:border-accent-blue/20 transition-all duration-500">
+                              <div className="flex items-center justify-end gap-3 mb-3">
+                                <h3 className="text-lg font-bold text-text-primary">{item.title}</h3>
+                                <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center text-accent-blue shrink-0">
+                                  <GraduationCap size={20} />
+                                </div>
+                              </div>
+                              <p className="text-sm text-text-secondary text-right mb-3">{item.institute}</p>
+                              <div className="flex items-center justify-end gap-2 text-accent-blue">
+                                <Calendar size={13} />
+                                <span className="text-xs font-semibold tracking-wide">{item.year}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+
+                    {/* Center Dot */}
+                    <div className="flex justify-center pt-6">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay, duration: 0.5, type: 'spring', stiffness: 300 }}
+                        className="relative"
+                      >
+                        <div className="w-4 h-4 rounded-full bg-accent-blue border-[3px] border-bg-primary relative z-10" />
+                        <div className="absolute inset-0 w-4 h-4 rounded-full bg-accent-blue animate-ping opacity-20" />
+                      </motion.div>
+                    </div>
+
+                    {/* Right Column */}
+                    <div className={!isEven ? 'pl-8' : ''}>
+                      {!isEven && (
+                        <motion.div
+                          initial={{ opacity: 0, x: 60 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay, duration: 0.7, ease: 'easeOut' }}
+                          whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                          className="group"
+                        >
+                          <div className="relative">
+                            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent-blue/0 to-accent-purple/0 group-hover:from-accent-blue/30 group-hover:to-accent-purple/30 transition-all duration-500 blur-sm" />
+                            <div className="relative glass-card rounded-2xl p-7 border border-white/10 group-hover:border-accent-blue/20 transition-all duration-500">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center text-accent-blue shrink-0">
+                                  <GraduationCap size={20} />
+                                </div>
+                                <h3 className="text-lg font-bold text-text-primary">{item.title}</h3>
+                              </div>
+                              <p className="text-sm text-text-secondary mb-3">{item.institute}</p>
+                              <div className="flex items-center gap-2 text-accent-blue">
+                                <Calendar size={13} />
+                                <span className="text-xs font-semibold tracking-wide">{item.year}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* ── Mobile Layout ── */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay, duration: 0.6 }}
+                    whileHover={{ y: -5, transition: { duration: 0.25 } }}
+                    className="md:hidden relative pl-16 group"
+                  >
+                    {/* Mobile timeline dot */}
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay, type: 'spring', stiffness: 300 }}
+                      className="absolute left-4 top-7 -translate-x-1/2"
+                    >
+                      <div className="w-4 h-4 rounded-full bg-accent-blue border-[3px] border-bg-primary relative z-10" />
+                      <div className="absolute inset-0 w-4 h-4 rounded-full bg-accent-blue animate-ping opacity-20" />
+                    </motion.div>
+
+                    <div className="relative">
+                      <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-accent-blue/0 to-accent-purple/0 group-hover:from-accent-blue/30 group-hover:to-accent-purple/30 transition-all duration-500 blur-sm" />
+                      <div className="relative glass-card rounded-2xl p-6 border border-white/10 group-hover:border-accent-blue/20 transition-all duration-500">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center text-accent-blue shrink-0">
+                            <GraduationCap size={20} />
+                          </div>
+                          <h3 className="text-base font-bold text-text-primary">{item.title}</h3>
+                        </div>
+                        <p className="text-sm text-text-secondary mb-3">{item.institute}</p>
+                        <div className="flex items-center gap-2 text-accent-blue">
+                          <Calendar size={13} />
+                          <span className="text-xs font-semibold tracking-wide">{item.year}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
                 </div>
-              </div>
-              <div className="space-y-12">
-                <TimelineItem 
-                  Icon={GraduationCap}
-                  title="MSc in Computer Science"
-                  subtitle="MIT (Open Courseware)"
-                  date="2018 - 2019"
-                  description="Specialized in Artificial Intelligence and distributed systems. Research focused on edge computing."
-                  side="left"
-                  delay={0.6}
-                />
-                <TimelineItem 
-                  Icon={GraduationCap}
-                  title="BSc in Software Engineering"
-                  subtitle="University of Dhaka"
-                  date="2014 - 2018"
-                  description="Graduated with honors. Developed multiple open-source projects and participated in national hackathons."
-                  side="right"
-                  delay={0.8}
-                />
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

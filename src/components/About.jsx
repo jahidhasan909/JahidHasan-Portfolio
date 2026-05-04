@@ -55,7 +55,7 @@ const About = () => {
         >
 
           {/* 🔹 Left: Image with Floating Tech Icons */}
-          <div className="relative">
+          <div className="relative w-[500px]">
 
             {/* Floating Tech Icons (behind the image) */}
             {/* React Icon */}

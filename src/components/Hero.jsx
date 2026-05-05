@@ -19,10 +19,8 @@ const LinkedinIcon = ({ size = 20 }) => (
   </svg>
 );
 
-const TwitterIcon = ({ size = 20 }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size}>
-    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-  </svg>
+const FacebookIcon = ({ size = 20 }) => (
+  <img src="https://i.ibb.co.com/7MgkXDD/Untitled-design-1-removebg-preview.png" alt="" />
 );
 
 const SocialIcon = ({ Icon: IconComponent, href, label }) => (
@@ -91,7 +89,7 @@ const Hero = () => {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
 
   return (
@@ -103,15 +101,15 @@ const Hero = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute hidden  lg:flex left-6 lg:left-12 top-1/2 -translate-y-1/2  flex-col gap-6 z-30 overflow-x-hidden "
+        className="absolute hidden   lg:flex left-6 lg:left-12 top-1/2 -translate-y-1/2  flex-col gap-6 z-30 overflow-x-hidden "
       >
-        <SocialIcon Icon={LinkedinIcon} href="#" label="LinkedIn" />
-        <SocialIcon Icon={GithubIcon} href="#" label="GitHub" />
-        <SocialIcon Icon={TwitterIcon} href="#" label="Twitter" />
+        <SocialIcon Icon={LinkedinIcon} href="https://www.linkedin.com/in/jahid--hasan" label="LinkedIn" />
+        <SocialIcon Icon={GithubIcon} href="https://github.com/jahidhasan909" label="GitHub" />
+        <SocialIcon Icon={FacebookIcon} href="https://www.facebook.com/share/1KgUXoTT3Z/?mibextid=wwXIfr" label="Twitter" />
         <div className="w-[1px] h-24 bg-gradient-to-b from-accent-blue to-transparent self-center mt-2 opacity-50" />
       </motion.div>
 
-      <div className="container mx-auto w-full grid lg:grid-cols-2 gap-10 items-center relative z-10 lg:px-38">
+      <div className="container mx-auto  w-full grid lg:grid-cols-2 gap-10 items-center relative z-10 lg:px-38">
 
 
         {/* 🔹 Center: Content */}
@@ -127,7 +125,7 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-xl md:text-2xl  font-medium"
               >
-                Hey, I'm
+                Hey, I&apos;m
               </motion.p>
               <motion.h1
                 variants={itemVariants}
@@ -180,15 +178,17 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-col items-center lg:items-start gap-6"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]"
-              >
-                Say Hello
-                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue" />
-              </motion.button>
+              <a href="#contact" className="w-full lg:w-auto flex justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]"
+                >
+                  Say Hello
+                  <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue" />
+                </motion.button>
 
+              </a>
 
 
               <motion.div

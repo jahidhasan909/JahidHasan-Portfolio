@@ -1,6 +1,7 @@
+
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
@@ -25,7 +26,7 @@ const Navbar = () => {
     { name: 'home', id: 'home', icon: "https://i.ibb.co.com/Hp9hWjyf/Screenshot-2026-05-04-at-12-33-01-AM-removebg-preview.png" },
     { name: 'about', id: 'about', icon: "https://i.ibb.co.com/msmJ5ZL/Screenshot-2026-05-04-at-12-35-45-AM-removebg-preview.png" },
     { name: 'tech stack', id: 'technologies', icon: "https://i.ibb.co.com/DD55mP6x/Screenshot-2026-05-04-at-12-33-37-AM-removebg-preview.png" },
-    { name: "skills", id: 'skills', icon: "https://i.ibb.co.com/gMg5xDfn/Screenshot-2026-05-04-at-1-37-16-AM-removebg-preview.png"},
+    { name: "skills", id: 'skills', icon: "https://i.ibb.co.com/gMg5xDfn/Screenshot-2026-05-04-at-1-37-16-AM-removebg-preview.png" },
     { name: 'qualification', id: 'qualification', icon: "https://i.ibb.co.com/n8n5JzB2/Screenshot-2026-05-04-at-12-34-18-AM-removebg-preview.png" },
     { name: 'projects', id: 'projects', icon: "https://i.ibb.co.com/KcpRHFJZ/Screenshot-2026-05-04-at-12-35-07-AM-removebg-preview.png" },
     { name: 'contact me', id: 'contact', icon: "https://i.ibb.co.com/LXMKZQhD/Screenshot-2026-05-04-at-12-36-09-AM-removebg-preview.png" }
@@ -44,9 +45,7 @@ const Navbar = () => {
 
           <img className='w-16' src="https://i.ibb.co.com/tThXTWJ1/Green-Minimalist-Initials-Logo-removebg-preview.png" alt="" />
 
-          <span className="font-display font-black text-2xl text-text-primary tracking-tighter">
-            Jahid Hasan
-          </span>
+
         </motion.div>
 
         {/* Menu */}
@@ -80,15 +79,16 @@ const Navbar = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="w-10 h-10 flex items-center justify-center glass-card rounded-full border border-white/10 text-accent-blue hover:bg-accent-blue hover:text-white transition-all duration-300"
-              aria-label="Toggle Theme"
-            >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-          )}
+          <button
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="w-10 h-10 flex items-center justify-center glass-card rounded-full border border-white/10 text-accent-blue hover:bg-accent-blue hover:text-white transition-all duration-300"
+            aria-label="Toggle Theme"
+          >
+            {/* avoid server/client mismatch by rendering icon only after mount */}
+            <span suppressHydrationWarning>
+              {mounted ? (theme === 'dark' ? <Sun size={18} aria-hidden /> : <Moon size={18} aria-hidden />) : null}
+            </span>
+          </button>
         </motion.div>
       </div>
 

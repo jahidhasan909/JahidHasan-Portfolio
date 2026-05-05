@@ -19,7 +19,7 @@ const LinkedinIcon = ({ size = 20 }) => (
 );
 
 const FacebookIcon = ({ size = 20 }) => (
-  <img src="https://i.ibb.co.com/YFPLcWb4/Untitled-design-removebg-preview-Picsart-Ai-Image-Enhancer.png" alt="" />
+  <img src="https://i.ibb.co.com/7MgkXDD/Untitled-design-1-removebg-preview.png" alt="" />
 );
 
 const Footer = () => {

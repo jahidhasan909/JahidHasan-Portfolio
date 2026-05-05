@@ -115,7 +115,7 @@ const CodeSnippet = ({ lines = [] }) => (
 const About = () => {
   return (
     // allow decorative cards to overflow the section bounds
-    <section id="about" className="py-32 px-6 lg:px-12 relative overflow-visible">
+    <section id="about" className="py-30 px-6 lg:px-12 relative overflow-visible">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
@@ -268,7 +268,7 @@ const About = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-4 backdrop-blur-xl bg-white/6 text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05] border border-white/10"
               >
-                Download CV
+                Download Resume
                 <Download size={18} className="group-hover:translate-y-1 transition-transform text-accent-blue" />
               </motion.button>
             </div>

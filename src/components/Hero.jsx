@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { Send, Sparkles, Code2, Rocket } from 'lucide-react';
 import { useState, useEffect } from "react";
+import { GrView } from "react-icons/gr";
 
 
 const GithubIcon = ({ size = 20 }) => (
@@ -176,8 +177,9 @@ const Hero = () => {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col items-center lg:items-start gap-6"
+              className="flex flex-col lg:flex-row items-center lg:items-start gap-3"
             >
+
               <a href="#contact" className="w-full lg:w-auto flex justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -191,38 +193,54 @@ const Hero = () => {
               </a>
 
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
-                className="mt-10 flex flex-col items-center lg:items-start gap-3"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center   gap-2 group hover:bg-white/[0.05]"
               >
-                {/* Mouse + scroll animation */}
-                <div className="flex flex-row items-center gap-3">
-                  {/* Mouse Icon */}
-                  <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center p-1">
-                    <motion.div
-                      animate={{ y: [0, 10, 0] }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      className="w-1.5 h-1.5 bg-accent-blue rounded-full"
-                    />
-                  </div>
+                View Resume <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue"><GrView /></span>
 
-                  {/* Scroll text */}
-                  <motion.span
-                    animate={{ opacity: [0.4, 1, 0.4] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="text-xs text-text-secondary tracking-widest"
-                  >
-                    SCROLL DOWN
-                  </motion.span>
+              </motion.button>
+
+
+
+
+
+
+
+            </motion.div>
+
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              className="mt-10 flex flex-col items-center lg:items-start gap-3"
+            >
+              {/* Mouse + scroll animation */}
+              <div className="flex flex-row items-center gap-3">
+                {/* Mouse Icon */}
+                <div className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center p-1">
+                  <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="w-1.5 h-1.5 bg-accent-blue rounded-full"
+                  />
                 </div>
-              </motion.div>
 
+                {/* Scroll text */}
+                <motion.span
+                  animate={{ opacity: [0.4, 1, 0.4] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="text-xs text-text-secondary tracking-widest"
+                >
+                  SCROLL DOWN
+                </motion.span>
+              </div>
             </motion.div>
           </motion.div>
         </div>

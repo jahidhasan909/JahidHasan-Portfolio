@@ -52,7 +52,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="hidden md:hidden lg:flex glass-card rounded-full py-2 px-2"
+          className="hidden  lg:flex glass-card rounded-full py-2 px-2"
         >
           <ul className="flex gap-1 text-[9px] font-bold uppercase tracking-widest">
             {navItems.map((item) => (

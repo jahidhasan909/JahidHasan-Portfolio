@@ -129,7 +129,7 @@ const Hero = () => {
               </motion.p>
               <motion.h1
                 variants={itemVariants}
-                className="text-4xl md:text-5xl font-display font-black leading-tight text-text-primary flex items-center gap-2"
+                className=" justify-center md:justify-items-start text-4xl md:text-5xl font-display font-black leading-tight text-text-primary flex items-center gap-2"
               >
                 Jahid Hasan
 
@@ -260,7 +260,7 @@ const Hero = () => {
             <div className="relative w-72 h-72 md:w-96 md:h-96 p-2 bg-gradient-to-tr from-accent-blue/40 to-accent-purple/40 animate-liquid-blob overflow-hidden backdrop-blur-xl">
               <div className="w-full h-full animate-liquid-blob overflow-hidden bg-black/50">
                 <img
-                  src="https://i.ibb.co.com/ZzPjzSTb/Oyt-Uf.jpg"
+                  src="https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg"
                   alt="Nur Adnan"
                   className="w-full h-full object-cover transition-all duration-700 scale-110"
                 />

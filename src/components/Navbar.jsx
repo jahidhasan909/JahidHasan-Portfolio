@@ -1,4 +1,4 @@
-
+// ...existing code...
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -32,6 +32,9 @@ const Navbar = () => {
     { name: 'contact me', id: 'contact', icon: "https://i.ibb.co.com/LXMKZQhD/Screenshot-2026-05-04-at-12-36-09-AM-removebg-preview.png" }
   ];
 
+  // avoid mismatch during SSR — only apply light-logo bg after mount
+  const logoBgClass = mounted && theme === 'light' ? 'bg-[#476970]  rounded-xl w-12' : 'bg-transparent w-20';
+
   return (
     <nav className="fixed top-0 left-0 w-full z-[100] py-6">
       <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between ">
@@ -40,12 +43,9 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center"
+          className={`flex items-center rounded-full p-1 ${logoBgClass}`}
         >
-
-          <img className='w-16' src="https://i.ibb.co.com/tThXTWJ1/Green-Minimalist-Initials-Logo-removebg-preview.png" alt="" />
-
-
+          <img className='' src="https://i.ibb.co.com/tThXTWJ1/Green-Minimalist-Initials-Logo-removebg-preview.png" alt="logo" />
         </motion.div>
 
         {/* Menu */}
@@ -54,7 +54,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="hidden md:hidden lg:flex glass-card rounded-full py-2 px-2"
         >
-          <ul className="flex gap-1 text-[11px] font-bold uppercase tracking-widest">
+          <ul className="flex gap-1 text-[9px] font-bold uppercase tracking-widest">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
@@ -62,7 +62,7 @@ const Navbar = () => {
                   onClick={() => setActive(item.id)}
                   className={`relative flex items-center  justify-center   gap-2 px-4 py-2.5 rounded-full transition-all duration-300 ease-out block
                     ${active === item.id
-                      ? "bg-white/10 backdrop-blur-xl border border-white/20 text-white"
+                      ? "bg-white/10 backdrop-blur-xl border border-white/20"
                       : "text-text-secondary hover:text-white hover:bg-white/5"
                     }`}
                 >
@@ -84,7 +84,6 @@ const Navbar = () => {
             className="w-10 h-10 flex items-center justify-center glass-card rounded-full border border-white/10 text-accent-blue hover:bg-accent-blue hover:text-white transition-all duration-300"
             aria-label="Toggle Theme"
           >
-            {/* avoid server/client mismatch by rendering icon only after mount */}
             <span suppressHydrationWarning>
               {mounted ? (theme === 'dark' ? <Sun size={18} aria-hidden /> : <Moon size={18} aria-hidden />) : null}
             </span>
@@ -102,3 +101,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// ...existing code...

@@ -231,7 +231,7 @@ const About = () => {
             </motion.div>
 
           </div>
-          <div className='my-8 lg:hidden md:hidden'></div>
+          <div className='my-1 lg:hidden md:hidden'></div>
           {/* 🔹 Right: Content */}
           <div className="space-y-8">
 

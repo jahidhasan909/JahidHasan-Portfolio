@@ -13,52 +13,63 @@ const GithubSvg = ({ size = 18 }) => (
 /* ── Project Data ── */
 const projects = [
   {
-    title: 'Google Docs Clone – Real-Time Collaboration',
-    description: 'A modern web application that allows users to create and edit documents in real time with collaboration features.',
-    image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=340&fit=crop',
-    tags: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-    github: '#',
-    demo: '#',
+    title: 'SkillSphere – Online Learning Platform',
+    description: 'SkillSphere is a modern online learning platform designed to help students explore courses, manage their learning journey, and track progress easily. It provides a smooth and interactive user experience with authentication, course management, and personalized profiles.',
+    image: 'https://i.ibb.co.com/kVZ0XyZQ/Screenshot-2026-05-07-at-1-01-49-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: [
+      'Next.js',
+      'MongoDB',
+      'HeroUI',
+      'JavaScript',
+      'Better Auth',
+      'React Hook Form',
+      'Framer Motion',
+      'Swiper.js',
+      'React Fast Marquee',
+      'TailwindCSS',
+      'React Spinner','React-toastify', 'React Icons'],
+    github: 'https://github.com/jahidhasan909/-SkillSphere-A08-Nextjs',
+    demo: 'https://skill-sphere-a08-nextjs.vercel.app/',
   },
   {
-    title: 'E-Commerce Dashboard – Admin Panel',
-    description: 'A comprehensive admin dashboard for managing products, orders, and customers with charts and analytics.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop',
-    tags: ['React.js', 'Next.js', 'Tailwind CSS', 'MongoDB'],
-    github: '#',
-    demo: '#',
+    title: 'Jazzdle - E-commerce Shop',
+    description: 'Jazzdle is an E-commerce platform for mobiles, laptops, and keyboards. Users can sign up/login with Google or GitHub, browse products, manage cart , and checkout easily. It includes a modern responsive UI with dark/light mode, sliders, animations, and Local Storage support.',
+    image: 'https://i.ibb.co.com/W4pGLSHW/Screenshot-2026-05-07-at-1-04-03-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: ['Next.js', 'JavaScript', 'Swiper.js', 'MongoDB', 'React Fast Marquee', 'Better Auth', 'Tailwind CSS', 'React Icons', ' Gravity Icons','React-toastify', 'HeroUI',],
+    github: 'https://github.com/jahidhasan909/Mobile-Shop',
+    demo: 'https://mobile-shop-five-psi.vercel.app',
   },
   {
-    title: 'AI Chat Application',
-    description: 'An intelligent chatbot application powered by AI APIs with a sleek, responsive conversational interface.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=340&fit=crop',
-    tags: ['JavaScript', 'React.js', 'Node.js', 'Express.js', 'Tailwind CSS'],
-    github: '#',
-    demo: '#',
+    title: 'Dragon News - news platforms',
+    description: 'Dragon News is a real-time news platform where users can browse daily news by category and read full articles. It supports secure login via Email, Google, and GitHub using Better Auth. The system includes protected pages, fast API-based news loading, and secure data handling with a Next.js proxy.',
+    image: 'https://i.ibb.co.com/TMHTtmRH/Screenshot-2026-05-07-at-1-04-40-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: ['Next.js', 'Tailwind CSS', 'JavaScript', 'DaisyUI', 'React Toastify', 'MongoDB', 'Better Auth'],
+    github: 'https://github.com/jahidhasan909/Dragon-News-Nextjs-Project',
+    demo: 'https://dragon-news-nextjs-project-five.vercel.app/news/01',
   },
   {
-    title: 'Portfolio Website – Creative Design',
-    description: 'A visually stunning personal portfolio with smooth animations, dark mode, and responsive design.',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=340&fit=crop',
-    tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-    github: '#',
-    demo: '#',
+    title: 'Keen Keeper - contact platform',
+    description: 'Keen Keeper is a contact management app where users can save contact details of friends or acquaintances and track the history of text, call and video communication, including dates. There is also a stats/flowchart section where the number of different types of communication can be seen.',
+    image: 'https://i.ibb.co.com/MkZYq81H/Screenshot-2026-05-07-at-1-05-28-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: ['JavaScript', 'React.js', 'Date-fns', 'React-icons','React-router','React-spinners','React-toastify', 'Tailwind CSS','Recharts'],
+    github: 'https://github.com/jahidhasan909/Keen-Keeper-A07',
+    demo: 'https://keen-keeper-a07.netlify.app',
   },
   {
-    title: 'Task Management App',
-    description: 'A full-stack task management application with drag-and-drop, real-time updates, and team collaboration.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=340&fit=crop',
-    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-    github: '#',
-    demo: '#',
+    title: 'Ai Hub - E-commerce Shop',
+    description: 'Ai-Model-Hub is an e-commerce platform designed to showcase and sell AI models. It allows users to browse models and manage their cart efficiently using React Hooks for a smooth shopping experience.',
+    image: 'https://i.ibb.co.com/Xf8Crjwb/Screenshot-2026-05-07-at-1-03-10-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: ['React.js', 'JavaScript', 'React-toastify', 'Daisyui', 'Tailwind CSS'],
+    github: 'https://github.com/jahidhasan909/Ai-Model-Hub',
+    demo: 'https://ai-model-hub-react.netlify.app',
   },
   {
-    title: 'Weather Dashboard – Live Data',
-    description: 'A beautiful weather dashboard that shows real-time weather data, forecasts, and interactive maps.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=340&fit=crop',
-    tags: ['JavaScript', 'React.js', 'Tailwind CSS'],
-    github: '#',
-    demo: '#',
+    title: 'Play Store-style – App download platform',
+    description: 'Play Store-style React web app where users can browse apps, install/uninstall them, and manage a personal installed list. It uses React Router for navigation, Context API for state sharing, and includes search, sorting, and dynamic app details pages with real-time updates and notifications.',
+    image: 'https://i.ibb.co.com/cSSmVhdD/Screenshot-2026-05-07-at-1-02-36-AM-Picsart-Ai-Image-Enhancer.png',
+    tags: ['JavaScript', 'React.js','React Router', 'Tailwind CSS','Daisyui','React-toastify','React Icons'],
+    github: 'https://github.com/jahidhasan909/Play-Store-project',
+    demo: 'https://play-store-project.netlify.app',
   },
 ];
 
@@ -82,7 +93,7 @@ const ProjectCard = ({ title, description, image, tags, github, demo, delay }) =
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-fill px-2  transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -120,7 +131,7 @@ const ProjectCard = ({ title, description, image, tags, github, demo, delay }) =
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-text-secondary leading-relaxed mb-5 flex-grow line-clamp-3">
+        <p className="text-sm text-text-secondary leading-relaxed mb-5  flex-grow">
           {description}
         </p>
 
@@ -129,7 +140,7 @@ const ProjectCard = ({ title, description, image, tags, github, demo, delay }) =
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/10"
+              className="text-xs font-medium whitespace-nowrap  px-3 py-1 rounded-full bg-accent-blue/10  border border-accent-blue/10"
             >
               {tag}
             </span>

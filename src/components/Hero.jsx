@@ -193,14 +193,16 @@ const Hero = () => {
               </a>
 
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center   gap-2 group hover:bg-white/[0.05]"
-              >
-                View Resume <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue"><GrView /></span>
+              <a href="/resume.pdf" >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center   gap-2 group hover:bg-white/[0.05]"
+                >
+                  View Resume <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform text-accent-blue"><GrView /></span>
 
-              </motion.button>
+                </motion.button>
+              </a>
 
 
 

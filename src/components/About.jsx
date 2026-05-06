@@ -263,14 +263,16 @@ const About = () => {
 
             {/* Button */}
             <div className="pt-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 backdrop-blur-xl bg-white/6 text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05] border border-white/10"
-              >
-                Download Resume
-                <Download size={18} className="group-hover:translate-y-1 transition-transform text-accent-blue" />
-              </motion.button>
+              <a href='/resume.pdf' download target="_blank">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-4 backdrop-blur-xl bg-white/6 text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05] border border-white/10"
+                >
+                  Download Resume
+                  <Download size={18} className="group-hover:translate-y-1 transition-transform text-accent-blue" />
+                </motion.button>
+              </a>
             </div>
 
           </div>

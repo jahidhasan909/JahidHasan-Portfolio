@@ -6,6 +6,8 @@ import CustomCursor from "@/components/CustomCursor";
 import Background from "@/components/Background";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import AppWapperLoader from "@/components/AppWapperLoader";
+
 
 const inter = Inter({
   variable: "--font-sans",
@@ -24,22 +26,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+
+
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased bg-transparent overflow-x-hidden" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className={`${inter.variable} ${poppins.variable} min-h-screen text-text-primary selection:bg-accent-blue/30 transition-colors duration-500`}>
-            {/* background sits behind everything */}
-            <Background />
+          <AppWapperLoader>
 
-            {/* main content placed above background */}
-            <main className="relative z-10 min-h-screen">
-              <CustomCursor />
-              <SmoothScroll>
-                {children}
-              </SmoothScroll>
-            </main>
-          </div>
+            <div className={`${inter.variable} ${poppins.variable} min-h-screen text-text-primary selection:bg-accent-blue/30 transition-colors duration-500`}>
+              {/* background sits behind everything */}
+              <Background />
+
+              {/* main content placed above background */}
+              <main className="relative z-10 min-h-screen">
+                <CustomCursor />
+                <SmoothScroll>
+                  {children}
+                </SmoothScroll>
+              </main>
+            </div>
+          </AppWapperLoader>
         </ThemeProvider>
       </body>
     </html>

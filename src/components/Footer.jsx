@@ -59,7 +59,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex items-center gap-3 mb-4"
         >
-          <div className="w-12 h-12 bg-gradient-to-tr from-accent-blue to-accent-purple rounded-xl flex items-center justify-center text-[#020617] font-black text-2xl">
+          <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
             <img className='w-16' src="https://i.ibb.co.com/tThXTWJ1/Green-Minimalist-Initials-Logo-removebg-preview.png" alt="" />
           </div>
         </motion.div>

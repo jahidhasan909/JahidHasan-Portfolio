@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
 
   // avoid mismatch during SSR — only apply light-logo bg after mount
-  const logoBgClass = mounted && theme === 'light' ? 'bg-[#476970]  rounded-xl w-12' : 'bg-transparent w-20';
+  const logoBgClass = mounted && theme === 'light' ? 'w-14 h-13 rounded-xl flex items-center justify-center -bg-white/80 backdrop-blur-md border border-white/70 shadow-lg' : 'bg-transparent w-20';
 
   return (
     <nav className="fixed top-0 left-0 w-full z-[100] py-6">
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <a
                   href={`#${item.id}`}
                   onClick={() => setActive(item.id)}
-                  className={`relative flex items-center  justify-center   gap-2 px-4 py-2.5 rounded-full transition-all duration-300 ease-out block
+                  className={`relative flex items-center  justify-center   gap-2 px-2.5 py-2 rounded-full transition-all duration-300 ease-out block
                     ${active === item.id
                       ? "bg-white/10 backdrop-blur-xl border border-white/20"
                       : "text-text-secondary hover:text-white hover:bg-white/5"

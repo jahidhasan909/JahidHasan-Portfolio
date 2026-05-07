@@ -263,7 +263,7 @@ const About = () => {
 
             {/* Button */}
             <div className="pt-4">
-              <a href='/resume.pdf' download target="_blank">
+              <a href='/resume.pdf' download="new-resume.pdf">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

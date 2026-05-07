@@ -26,7 +26,7 @@ export const metadata = {
   openGraph: {
     title: "Jahid Hasan - Portfolio",
     description: "Frontend-Focused Junior Full-Stack Developer | React | Next.js | javascript | express js | node js | MongoDB",
-    url: "https://jahidhasan999.vercel.app/?v=fresh-update",
+    url: "https://jahidhasan999.vercel.app",
     siteName: "Jahid Hasan Portfolio",
     images: [
       {

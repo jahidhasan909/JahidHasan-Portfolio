@@ -21,30 +21,35 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://jahidhasan999.vercel.app"),
+
   title: "Jahid Hasan - Portfolio",
-  description: "Frontend-Focused Junior Full-Stack Developer specializing in React, Next.js, and modern web applications.",
+  description:
+    "Frontend-Focused Junior Full-Stack Developer specializing in React, Next.js, and modern web applications.",
+
   openGraph: {
     title: "Jahid Hasan - Portfolio",
-    description: "Frontend-Focused Junior Full-Stack Developer | React | Next.js | javascript | express js | node js | MongoDB",
-    url: "https://jahidhasan999.vercel.app",
+    description:
+      "Frontend-Focused Junior Full-Stack Developer | React | Next.js | JavaScript | Node.js | MongoDB",
+    url: "/",
     siteName: "Jahid Hasan Portfolio",
     images: [
       {
-        url: "https://jahidhasan999.vercel.app/jahidhasan.jpeg?v=2026",
+        url: "/jahidhasan.jpeg",
         width: 1200,
         height: 630,
       },
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Jahid Hasan - Portfolio",
-    description: "Frontend-Focused Junior Full-Stack Developer| React | Next.js",
-    images: ["https://jahidhasan999.vercel.app/jahidhasan.jpeg?v=2026"],
+    description: "Frontend-Focused Junior Full-Stack Developer | React | Next.js",
+    images: ["/jahidhasan.jpeg"],
   },
 };
-
 export default function RootLayout({ children }) {
 
 

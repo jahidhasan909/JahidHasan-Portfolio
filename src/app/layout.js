@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "Jahid Hasan Portfolio",
     images: [
       {
-        url: "https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg",
+        url: "https://jahidhasan999.vercel.app/jahidhasan.jpeg",
         width: 1200,
         height: 630,
       },
@@ -41,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Jahid Hasan - Portfolio",
     description: "Frontend-Focused Junior Full-Stack Developer| React | Next.js",
-    images: ["https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg"],
+    images: ["https://jahidhasan999.vercel.app/jahidhasan.jpeg"],
   },
 };
 

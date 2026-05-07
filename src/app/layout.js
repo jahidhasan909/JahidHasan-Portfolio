@@ -26,11 +26,11 @@ export const metadata = {
   openGraph: {
     title: "Jahid Hasan - Portfolio",
     description: "Frontend-Focused Junior Full-Stack Developer | React | Next.js | javascript | express js | node js | MongoDB",
-    url: "https://jahidhasan999.vercel.app",
+    url: "https://jahidhasan999.vercel.app/?v=fresh-update",
     siteName: "Jahid Hasan Portfolio",
     images: [
       {
-        url: "https://jahidhasan999.vercel.app/jahidhasan.jpeg",
+        url: "https://jahidhasan999.vercel.app/jahidhasan.jpeg?v=2026",
         width: 1200,
         height: 630,
       },
@@ -41,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Jahid Hasan - Portfolio",
     description: "Frontend-Focused Junior Full-Stack Developer| React | Next.js",
-    images: ["https://jahidhasan999.vercel.app/jahidhasan.jpeg"],
+    images: ["https://jahidhasan999.vercel.app/jahidhasan.jpeg?v=2026"],
   },
 };
 

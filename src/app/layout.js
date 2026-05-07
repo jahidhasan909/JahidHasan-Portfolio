@@ -21,8 +21,28 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Jahid Hasan",
-  description: "...",
+  title: "Jahid Hasan - Portfolio",
+  description: "Frontend-Focused Junior Full-Stack Developer specializing in React, Next.js, and modern web applications.",
+  openGraph: {
+    title: "Jahid Hasan - Portfolio",
+    description: "Frontend-Focused Junior Full-Stack Developer | React | Next.js | javascript | express js | node js | MongoDB",
+    url: "https://jahidhasan999.vercel.app",
+    siteName: "Jahid Hasan Portfolio",
+    images: [
+      {
+        url: "https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jahid Hasan - Portfolio",
+    description: "Frontend-Focused Junior Full-Stack Developer| React | Next.js",
+    images: ["https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {

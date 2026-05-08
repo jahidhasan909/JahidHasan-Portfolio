@@ -7,6 +7,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const SmoothScroll = ({ children }) => {
   useEffect(() => {
+
+    if (window.innerWidth < 1024) return;
+
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
@@ -17,11 +22,13 @@ const SmoothScroll = ({ children }) => {
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
+    const raf = (time) => {
       lenis.raf(time * 1000);
-    });
+    };
 
+    gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
+
 
     return () => {
       lenis.destroy();

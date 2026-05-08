@@ -60,16 +60,16 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <>
+    <div className='custom-cursor'>
       <div
         ref={dotRef}
-        className="cursor-dot fixed top-0 left-0 w-2 h-2 bg-accent-blue rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
+        className="cursor-dot   fixed top-0 left-0 w-2 h-2 bg-accent-blue rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
       />
       <div
         ref={outlineRef}
         className="cursor-outline fixed top-0 left-0 w-10 h-10 border border-accent-blue/30 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 transition-transform ease-out"
       />
-    </>
+    </div>
   );
 };
 

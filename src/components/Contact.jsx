@@ -98,7 +98,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-32 px-6 lg:px-12 overflow-hidden relative">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         {/* Header */}
         <motion.div
@@ -108,13 +108,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center mb-20"
         >
-          <h2 className="text-4xl font-display font-black text-text-primary text-center">
+          <h2 className="text-3xl font-display font-black text-text-primary text-center">
             Get in Touch
           </h2>
-          <p className="text-[10px] text-text-secondary font-bold uppercase tracking-widest mt-4">
+          <p className="text-[9px] text-text-secondary font-bold uppercase tracking-widest mt-4">
             Contact Me
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
         </motion.div>
 
         {/* Two Column Layout */}
@@ -127,7 +126,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-lg text-center mb-4 font-bold text-text-primary mb-2">Talk to me</h3>
+            <h3 className="text-[16px] text-center mb-4 font-bold text-text-primary mb-2">Talk to me</h3>
             
 
             <div className="space-y-5">
@@ -162,7 +161,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg text-center mb-4 font-bold text-text-primary mb-2">Write me your project</h3>
+            <h3 className="text-[16px] text-center mb-4 font-bold text-text-primary mb-2">Write me your project</h3>
            
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -222,7 +221,7 @@ const Contact = () => {
                 className="relative group/btn w-full sm:w-auto"
               >
                 <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-accent-blue to-accent-purple opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-sm" />
-                <div className="px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]">
+                <div className="text-[15px] px-10 py-4 glass-card text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05]">
                   Send Message
                   <Send size={16} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300 text-accent-blue" />
                 </div>

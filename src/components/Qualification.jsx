@@ -32,11 +32,11 @@ const Qualification = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center mb-20"
         >
-          <h2 className="text-4xl font-display font-black text-text-primary text-center">
+          <h2 className="text-3xl font-display font-black text-text-primary text-center">
             Qualification
           </h2>
-          <p className="text-[10px] font-bold uppercase tracking-wider mt-4 text-text-secondary">My Personal Journey</p>
-          <div className="w-20 h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
+          <p className="text-[9px] font-bold uppercase tracking-wider mt-4 text-text-secondary">My Personal Journey</p>
+         
         </motion.div>
 
         {/* Timeline Container */}

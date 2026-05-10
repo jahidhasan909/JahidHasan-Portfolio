@@ -13,7 +13,7 @@ import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   return (
-    <main className="scroll-smooth">
+    <main className="scroll-smooth max-w-7xl mx-auto">
       <Navbar />
       <Hero />
       <About />

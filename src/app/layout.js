@@ -1,5 +1,5 @@
 // ...existing code...
-import { Inter, Poppins } from "next/font/google";
+import {Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
@@ -9,16 +9,10 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import AppWapperLoader from "@/components/AppWapperLoader";
 
 
-const inter = Inter({
-  variable: "--font-sans",
+const Josefinsans = Josefin_Sans({
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata = {
   metadataBase: new URL("https://jahidhasan999.vercel.app"),
@@ -62,7 +56,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AppWapperLoader>
 
-            <div className={`${inter.variable} ${poppins.variable} min-h-screen text-text-primary selection:bg-accent-blue/30 transition-colors duration-500`}>
+            <div className={`${Josefinsans.className}  min-h-screen text-text-primary selection:bg-accent-blue/30 transition-colors duration-500`}>
               {/* background sits behind everything */}
               <Background />
 

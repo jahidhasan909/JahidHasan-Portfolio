@@ -116,7 +116,7 @@ const About = () => {
   return (
     // allow decorative cards to overflow the section bounds
     <section id="about" className="py-30 px-6 lg:px-12 relative overflow-visible">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
         <div className="flex flex-col items-center mb-20">
@@ -126,9 +126,9 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center text-xs font-bold tracking-[0.3em] mb-4"
           >
-            <h1 className='text-4xl font-bold font-display mb-2'>About</h1>
-            <p className='text-[10px] text-text-secondary tracking-wider uppercase'>My Introduction</p>
-            <div className="w-20 mx-auto h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-4 rounded-full" />
+            <h1 className='text-3xl font-bold font-display mb-2'>About</h1>
+            <p className='text-[9px] text-text-secondary tracking-wider uppercase'>My Introduction</p>
+           
           </motion.div>
         </div>
 
@@ -267,7 +267,7 @@ const About = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-10 py-4 backdrop-blur-xl bg-white/6 text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05] border border-white/10"
+                  className="px-10 text[16px] py-4 backdrop-blur-xl bg-white/6 text-text-primary font-bold rounded-xl transition-all flex items-center gap-2 group hover:bg-white/[0.05] border border-white/10"
                 >
                   Download Resume
                   <Download size={18} className="group-hover:translate-y-1 transition-transform text-accent-blue" />

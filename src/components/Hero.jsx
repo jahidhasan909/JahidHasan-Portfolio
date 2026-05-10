@@ -94,7 +94,7 @@ const Hero = () => {
 
 
   return (
-    <section id="home" className="relative  container mx-auto   min-h-screen flex items-center pt-20 px-6 lg:px-12 overflow-hidden">
+    <section id="home" className="relative  max-w-7xl mx-auto   min-h-screen flex items-center pt-14 px-6 lg:px-8 overflow-hidden">
       {/* Removed Background Glow Spots */}
 
       {/* 🔹 Left: Vertical Socials */}
@@ -102,7 +102,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute hidden   lg:flex left-6 lg:left-12 top-1/2 -translate-y-1/2  flex-col gap-6 z-30 overflow-x-hidden "
+        className="absolute hidden   lg:flex left-6 lg:left-12 top-1/2 mt-17 -translate-y-1/2  flex-col gap-6 z-30 overflow-x-hidden "
       >
         <SocialIcon Icon={LinkedinIcon} href="https://www.linkedin.com/in/jahid--hasan" label="LinkedIn" />
         <SocialIcon Icon={GithubIcon} href="https://github.com/jahidhasan909" label="GitHub" />
@@ -110,7 +110,7 @@ const Hero = () => {
         <div className="w-[1px] h-24 bg-gradient-to-b from-accent-blue to-transparent self-center mt-2 opacity-50" />
       </motion.div>
 
-      <div className="container mx-auto  w-full grid lg:grid-cols-2 gap-10 items-center relative z-10 lg:px-38">
+      <div className="max-w-7xl mx-auto  w-full grid lg:grid-cols-2 gap-14 items-center relative z-10 lg:px-32 ">
 
 
         {/* 🔹 Center: Content */}
@@ -119,18 +119,18 @@ const Hero = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-center lg:text-left z-10 flex flex-col items-center lg:items-start gap-8"
+            className="text-center lg:text-left z-10 flex flex-col items-center lg:items-start gap-8 mt-17"
           >
             <div className="space-y-4">
               <motion.p
                 variants={itemVariants}
-                className="text-xl md:text-2xl  font-medium"
+                className="text-xl md:text-xl  font-medium"
               >
                 Hey, I&apos;m
               </motion.p>
               <motion.h1
                 variants={itemVariants}
-                className=" justify-center md:justify-items-start text-4xl md:text-5xl font-display font-black leading-tight text-text-primary flex items-center gap-2"
+                className=" justify-center items-start text-3xl md:text-4xl font-display font-black leading-tight text-text-primary  gap-2"
               >
                 Jahid Hasan
 
@@ -273,11 +273,11 @@ const Hero = () => {
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-dashed border-accent-blue/50 rounded-full animate-liquid-blob"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-dashed border-accent-blue/50 rounded-full animate-liquid-blob "
             />
 
             {/* Main Profile Image with Liquid Blob */}
-            <div className="relative w-72 h-72 md:w-96 md:h-96 p-2 bg-gradient-to-tr from-accent-blue/40 to-accent-purple/40 animate-liquid-blob overflow-hidden backdrop-blur-xl">
+            <div className="relative w-72 h-72 md:w-92 md:h-92 p-2 bg-gradient-to-tr from-accent-blue/40 to-accent-purple/40 animate-liquid-blob overflow-hidden backdrop-blur-xl ">
               <div className="w-full h-full animate-liquid-blob overflow-hidden bg-black/50">
                 <img
                   src="https://i.ibb.co.com/gFdhsG7D/Gemini-Generated-Image-1we10c1we10c1we1-Photoroom.jpg"
@@ -298,7 +298,7 @@ const Hero = () => {
             <StatCard
               Icon={Rocket}
               title="Projects"
-              value="25+ Done"
+              value="30+ Done"
               delay={1.4}
               className="-bottom-8 -left-4 md:-left-12 backdrop-blur-2xl"
             />

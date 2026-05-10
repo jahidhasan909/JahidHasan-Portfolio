@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Heart } from 'lucide-react';
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 const GithubIcon = ({ size = 20 }) => (
@@ -49,7 +49,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="pt-20 relative overflow-hidden border-t border-white/5">
+    <footer className="pt-20 my-8 relative overflow-hidden border rounded-xl border-white/5 max-w-[380px] md:max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center relative z-10">
 
         {/* Logo */}
@@ -59,7 +59,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex items-center gap-3 mb-4"
         >
-          <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
+          <div className="w-13 h-13 rounded-xl flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
             <img className='w-16' src="https://i.ibb.co.com/tThXTWJ1/Green-Minimalist-Initials-Logo-removebg-preview.png" alt="" />
           </div>
         </motion.div>
@@ -82,7 +82,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Navigation Links */}
-        <ul className="flex flex-wrap justify-center gap-8 md:gap-12 mb-8 text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary">
+        <ul className="flex flex-wrap justify-center gap-8 md:gap-10 mb-8 text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary">
           <li><a className="hover:text-accent-blue transition-colors" href="#home">Home</a></li>
           <li><a className="hover:text-accent-blue transition-colors" href="#about">About</a></li>
           <li><a className="hover:text-accent-blue transition-colors" href="#skills">Skills</a></li>

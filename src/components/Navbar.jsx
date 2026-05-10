@@ -40,7 +40,7 @@ const Navbar = () => {
   ];
 
   // apply specified logo background only when theme is light (white theme)
-  const logoBgClass = mounted && theme === 'light' ? 'bg-[#476970] rounded-xl p-1' : 'bg-transparent';
+  const logoBgClass = mounted && theme === 'light' ? 'bg-[#7e8c93] rounded-xl w-10' : 'bg-transparent';
 
   return (
     <div>
@@ -74,7 +74,7 @@ const Navbar = () => {
                       setMoreOpen(false);
                     }}
                     className={`flex items-center gap-2 px-4 h-10 rounded-full transition-all duration-200 ${active === item.id
-                        ? 'bg-white/10 backdrop-blur-xl border border-white/20 text-white'
+                        ? 'bg-white/10 backdrop-blur-xl border border-white/20 '
                         : 'text-text-secondary hover:text-white hover:bg-white/5'
                       }`}
                   >

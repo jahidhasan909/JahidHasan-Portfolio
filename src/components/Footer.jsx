@@ -76,13 +76,13 @@ const Footer = () => {
         </motion.div>
 
         <motion.div>
-          <p className="text-[13px] mb-7 text-center text-text-secondary font-bold flex items-center gap-2  tracking-[0.1em]">
+          <p className="text-[9px] md:text-[13px] mb-7 text-center text-text-secondary font-bold flex items-center gap-2  tracking-[0.1em]">
             Frontend-focused full-stack developer specializing <br /> in modern web technologies and creating smooth user experiences.
           </p>
         </motion.div>
 
         {/* Navigation Links */}
-        <ul className="flex flex-wrap justify-center gap-8 md:gap-10 mb-8 text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary">
+        <ul className="flex flex-wrap justify-center gap-8 md:gap-10 mb-8 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary">
           <li><a className="hover:text-accent-blue transition-colors" href="#home">Home</a></li>
           <li><a className="hover:text-accent-blue transition-colors" href="#about">About</a></li>
           <li><a className="hover:text-accent-blue transition-colors" href="#skills">Skills</a></li>
@@ -119,7 +119,7 @@ const Footer = () => {
       <div className="w-24  mx-auto h-1 bg-gradient-to-r from-accent-blue to-accent-purple mt-2 mb-3 rounded-full" />
       {/* Copyright */}
       <div className="flex pb-5 flex-col items-center gap-2 text-center">
-        <p className="text-[8px] text-text-secondary font-bold tracking-[0.3em] uppercase text-center">
+        <p className="text-[5px] md:text-[8px] text-text-secondary font-bold tracking-[0.3em] uppercase text-center">
           © {new Date().getFullYear()} Jahid Hasan. All rights reserved.
         </p>
       </div>

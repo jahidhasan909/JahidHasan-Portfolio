@@ -80,7 +80,7 @@ const itemVariants = {
 const Hero = () => {
 
 
-  const roles = ["Frontend Developer", "Web Developer", "Full Stack Developer"];
+  const roles = ["Frontend Developer", "Web Developer", "MERN Stack Developer"];
 
   const [roleIndex, setRoleIndex] = useState(0);
 
